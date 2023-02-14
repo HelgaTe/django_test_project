@@ -127,8 +127,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# MEDIA_URL = '/media/' #folder name where images are stored
-# MEDIA_ROOT = os.path.join(BASE_DIR, '/madia/') 
+MEDIA_URL = 'media/' #folder name where images are stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/') 
 # path to folder with images 
 # check comments in urls.py (my_first_project) - > we add <if statement> to
 # enable developer to see images are upload and visible on site  

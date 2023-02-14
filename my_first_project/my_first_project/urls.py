@@ -19,14 +19,17 @@ from cafe_menu.views import main_menu, main_page
 from cafe_events.views import events, list_events_year, list_events_year_month
 from django.conf import settings
 from django.conf.urls.static import static
+from main_page.views import main
+
 
 urlpatterns = [
+    path('', main),
     path('admin/', admin.site.urls),
     path('', main_page),
     path('menu/', main_menu),
     path('events/', include('cafe_events.urls')),
 ]
 
-# if settings.DEBUG:
-#     urlpatterns = static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
     
